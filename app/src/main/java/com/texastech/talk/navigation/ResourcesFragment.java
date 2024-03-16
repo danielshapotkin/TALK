@@ -32,12 +32,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ResourcesFragment extends Fragment {
-    /**
-     * Displays the resources that the user should be reading
-     * based on their mood information.
-     */
+
     public ResourcesFragment() {
-        // Required.
+
     }
 
     public static ResourcesFragment newInstance() {
@@ -76,9 +73,7 @@ public class ResourcesFragment extends Fragment {
         final int MoodModerate = 5;
         final int MoodHappy = 6;
 
-        /**
-         *
-         */
+
         LinearLayout scrollableLinearLayout = new LinearLayout(view.getContext());
         scrollableLinearLayout.setOrientation(LinearLayout.VERTICAL);
         scrollableLinearLayout.setLayoutParams(new LinearLayout.LayoutParams(
@@ -166,7 +161,7 @@ public class ResourcesFragment extends Fragment {
             );
             buttonLayoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
             learnMoreBtn.setLayoutParams(buttonLayoutParams);
-            learnMoreBtn.setText("Learn more");
+            learnMoreBtn.setText("Читать подробнее");
             learnMoreBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
