@@ -35,13 +35,8 @@ import com.texastech.talk.notification.AlarmReceiver;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
-    /**
-     * This is the core, single activity that runs throughout the lifetime of
-     * the application. The rest of the UI consists of fragments embedded
-     * into the UI for this activity using the Navigation component or
-     * AlertDialogs and other Android components for requesting for input.
-     */
+public class MainActivity extends AppCompatActivity
+{
     public static final String QUERY_MOOD_PARAMETER = "MainActivity.QueryMood";
     public static final String NOTIFICATION_CHANNEL_ID = "MainActivity.NotificationChan";
 
@@ -50,14 +45,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        /**
-         * Runs when the activity is first launched. For more information about
-         * the Android activity lifecycle, please refer to https://bit.ly/2q7i3eK.
-         */
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        //SharedPreferences.Editor editor = sharedPrefs.edit();
+        //editor.remove(IntroActivity.LAUNCHED_APP_BEFORE); // Удаляем флаг
+        //editor.apply();
         if (!sharedPrefs.getBoolean(IntroActivity.LAUNCHED_APP_BEFORE, false)) {
             Intent intent = new Intent(this, IntroActivity.class);
             finish();
@@ -67,15 +62,28 @@ public class MainActivity extends AppCompatActivity {
 
         registerNotificationChannel();
         setupBottomNavigation();
+
+
+
+        // Перенес блок сюда, потому что перестался вызваться метод. Не забыть
+        {
+
+            CharSequence[] moods = {
+                    // Depressed = 1, Sad = 2, Angry = 3, Scared = 4, Moderate = 5, Happy = 6
+                    "Деспрессивный", "Грустный", "Злой", "Испуганный", "Спокойный", "Счастливый"
+            };
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.DarkAlertDialog);
+            builder.setTitle("Как вы себя чувствуете?");
+            builder.setSingleChoiceItems(moods, 0, new MoodDialogChoiceListener());
+            builder.setPositiveButton("Далее", new MoodDialogListener());
+            builder.show();
+        }
     }
 
     @Override
     protected void onResume() {
-        /**
-         * This callback is called when the app is being restored after being paused.
-         * This could be due to one of two reasons: the user opened the app from
-         * the app icon or by clicking a notification from Talk.
-         */
+
         super.onResume();
 
         // TODO: Remove, this is for demo purposes
@@ -89,11 +97,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void registerNotificationChannel() {
-        /**
-         * Registers a notification channel which is required to post notifications
-         * to the user. This is done repeatedly whenever the app is started but
-         * there is not problem with calling .createNotificationChannel repeatedly.
-         */
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
             NotificationChannel channel = new NotificationChannel(
@@ -109,20 +113,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void setupBottomNavigation() {
-        /**
-         * Links the BottomNavigationView element to the NavController that controls
-         * the NavHost containing all the top-level UI fragments. The NavController
-         * is then used to switch between UIs/fragments.
-         */
+
         BottomNavigationView bottomNav = findViewById(R.id.bottom_nav_view);
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(bottomNav, navController);
     }
 
     void setupResourcesDatabase() {
-        /**
-         * Sets up the Resources database with all the articles.
-         */
+
         AppDatabase database = AppDatabase.getDatabase(getApplicationContext());
         ResourcesDao resDao = database.resourcesDao();
 
@@ -134,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
         final int MoodModerate = 5;
         final int MoodHappy = 6;
 
-        // Create the list of all the resources
+
         Resources[] allResources = {
                 // Depressed
                 new Resources("Как справиться с депрессией с депрессией", "Когда вы в депресии, вы не можете просто заставить себя выйти из этого состояния. Но эти советы могут помочь вам начать путь к выздоровлению.", "https://www.helpguide.org/articles/depression/coping-with-depression.htm", MoodDepressed),
@@ -157,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
                 // Scared
                 new Resources("Фобии и иррациональные страхи", "Мешает ли вам фобия делать то, что вы хотели бы делать? Узнайте, как распознать, лечить и преодолеть эту проблему.", "https://www.helpguide.org/articles/anxiety/phobias-and-irrational-fears.htm", MoodScared),
                 new Resources("Я испуган", "Тот факт, что вы чувствуете страх от этих навязчивых мыслей, означает, что вам нужно посетить психотерапевта.", "https://www.mentalhelp.net/advice/i-m-scared/", MoodScared),
-                new Resources("Jeremy Zucker - Испуганный (Текст)", "Послушайте песню о одиночестве.", "https://www.youtube.com/watch?v=iyEUvUcMHgE", MoodScared),
+                new Resources("Jeremy Zucker - Испуганный ", "Послушайте песню о одиночестве.", "https://www.youtube.com/watch?v=iyEUvUcMHgE", MoodScared),
                 new Resources("Как перестать быть чертовски испуганным постоянно", "Так что, вы испуганы. Давайте, наконец, поговорим об этом, хорошо?", "https://ittybiz.com/how-to-stop-being-scared/", MoodScared),
 
                 // Moderate
@@ -179,12 +177,10 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Resource database loaded", Toast.LENGTH_LONG).show();
     }
 
-    void showCurrentMoodDialog() {
-        /**
-         * Shows the user a dialog that asks them for their current mood then
-         * stores the result inside of an instance variable.
-         */
-        CharSequence moods[] = {
+    void showCurrentMoodDialog()
+    {
+
+        CharSequence[] moods = {
                 // Depressed = 1, Sad = 2, Angry = 3, Scared = 4, Moderate = 5, Happy = 6
                 "Деспрессивный", "Грустный", "Злой", "Испуганный", "Спокойный", "Счастливый"
         };
@@ -197,9 +193,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void showMoodIntensityDialog() {
-        /**
-         * Shows the dialog that asks the user the intensity of the mood
-         */
+
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this, R.style.DarkAlertDialog);
         SeekBar seekBar = new SeekBar(MainActivity.this);
         seekBar.setMax(4);
@@ -213,9 +207,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void saveMoodToDatabase() {
-        /**
-         * Saves the current mood state to the SQLite database.
-         */
+
         AppDatabase database = AppDatabase.getDatabase(getApplicationContext());
         MoodDao moodDao = database.moodDao();
 
@@ -236,12 +228,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void showNotification() {
-        /**
-         * Sets the alarm to display a notification in the notification bar asking the user to hit
-         * the notification so that they get prompted to enter their mood. The notification is
-         * shown 3 seconds after requested for demo purposes.
-         * TODO: Remove.
-         */
+
         Intent intent = new Intent(this, AlarmReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
         AlarmManager alarmMgr = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
@@ -255,10 +242,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     class MoodDialogListener implements DialogInterface.OnClickListener {
-        /**
-         * Listeners for the click event when the user chooses the mood
-         * that they're in and hits the submit button.
-         */
+
         @Override
         public void onClick(DialogInterface dialog, int which) {
             showMoodIntensityDialog();
@@ -266,10 +250,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     class MoodDialogChoiceListener implements DialogInterface.OnClickListener {
-        /**
-         * Listens for the event in which the user chooses a different mood
-         * from the multiple choice menu.
-         */
+
         @Override
         public void onClick(DialogInterface dialog, int which) {
             // Offset the choice because it goes from 0-5
@@ -278,10 +259,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     class MoodIntesityDialogListener implements DialogInterface.OnClickListener {
-        /**
-         * Listens for the event in which the user chooses a mood intensity
-         * using the SeekBar then hits the submit button.
-         */
+
         @Override
         public void onClick(DialogInterface dialog, int which) {
             saveMoodToDatabase();
@@ -290,10 +268,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     class MoodIntensityDialogSeekListener implements SeekBar.OnSeekBarChangeListener {
-        /**
-         * Listens for updates on the SeekBar used to get the user's current mood.
-         * The data is stored which is then used to save to the local SQLite database.
-         */
+
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             // Progress goes from 0-5 but we use 1-6

@@ -25,7 +25,7 @@
     <color name="colorBottomNavSeparator">#45535D</color>
 
     <!-- Alert dialog colors -->
-    <color name="colorAlertDialogBackground">#FFFFFF</color>
+    <color name="colorAlertDialogBackground">#00574B</color>
     <color name="colorAlertDialogButton">#20A0EE</color>
     <color name="colorAlertDialogText">#EFEFEF</color>
 </resources>
