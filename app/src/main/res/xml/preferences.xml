@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <SwitchPreferenceCompat
         app:key="notifications"
-        app:title="Disable notifications"
-        app:summary="Disable notifications so that you don't get asked about your mood daily"
-        app:iconSpaceReserved="false"/>
+        app:title="Выключить уведомления"
+        app:summary="Выключите уведомления, если вы не хотите рассказывать о своем настроении каждый день"
+        app:iconSpaceReserved="false"
+        />
 
     <Preference
         app:key="feedback"
-        app:title="Open-Source Licenses"
-        app:summary="View the third-party libraries that were used for this project"
-        app:iconSpaceReserved="false"/>
+        app:title="Предложения и пожелания"
+        app:summary="Предложения и пожелания по добавлению новых фич отправляйте на почту evavezhnovec@gmail.com"
+        app:iconSpaceReserved="false"
+        />
 
 </PreferenceScreen>
