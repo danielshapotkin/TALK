@@ -5,7 +5,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 /**
- * TODO: Add conversion class for the dates if necessary. You can
+ * Add conversion class for the dates if necessary. You can
  *  as a UNIX timestamp then convert to/from the normal date/time format.
  */
 
