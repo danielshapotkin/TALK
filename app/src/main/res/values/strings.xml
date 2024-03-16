@@ -2,22 +2,22 @@
     <string name="app_name">Talk</string>
 
     <!-- Intro slides -->
-    <string name="intro_slide1_header">Welcome to Talk</string>
-    <string name="intro_slide1_body">Talk is a personal tool that helps you keep track of your mental health</string>
-    <string name="intro_slide2_header">Journal</string>
-    <string name="intro_slide2_body">Use the journal to write more detailed information about how you\'re feeling</string>
-    <string name="intro_slide3_header">Mood Graph</string>
-    <string name="intro_slide3_body">Use the graph to view your mood history</string>
-    <string name="intro_slide4_header">Resources</string>
-    <string name="intro_slide4_body">Get suggested articles and videos that can help you improve your mood</string>
-    <string name="intro_slide5_header">Location and Apps</string>
-    <string name="intro_slide5_body">Track your movement and app usage to better understand your moods</string>
-    <string name="intro_slide6_header">Terms and Conditions</string>
-    <string name="intro_slide6_body">Please read the terms and conditions before you use the app</string>
+    <string name="intro_slide1_header">Добро пожаловать в Talk</string>
+    <string name="intro_slide1_body">Talk - это личный инструмент, который помогает отслеживать ваше психическое здоровье</string>
+    <string name="intro_slide2_header">Журнал</string>
+    <string name="intro_slide2_body">Используйте журнал, чтобы записывать более подробную информацию о вашем настроении</string>
+    <string name="intro_slide3_header">График настроения</string>
+    <string name="intro_slide3_body">Используйте график для просмотра истории вашего настроения</string>
+    <string name="intro_slide4_header">Ресурсы</string>
+    <string name="intro_slide4_body">Получайте рекомендации статей и видео, которые могут помочь вам улучшить настроение</string>
+    <string name="intro_slide5_header">Местоположение и приложения</string>
+    <string name="intro_slide5_body">Отслеживайте ваше перемещение и использование приложений, чтобы лучше понять свое настроение</string>
+    <string name="intro_slide6_header">Условия использования</string>
+    <string name="intro_slide6_body">Пожалуйста, ознакомьтесь с условиями использования перед использованием приложения</string>
 
     <!-- BottomNavigationView strings -->
-    <string name="menu_journal">Journal</string>
-    <string name="menu_resources">Resources</string>
-    <string name="menu_statistics">Statistics</string>
-    <string name="menu_settings">Settings</string>
+    <string name="menu_journal">Журнал</string>
+    <string name="menu_resources">Ресурсы</string>
+    <string name="menu_statistics">Статистика</string>
+    <string name="menu_settings">Настройки</string>
 </resources>
