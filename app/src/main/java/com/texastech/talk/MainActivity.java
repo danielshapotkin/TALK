@@ -137,41 +137,42 @@ public class MainActivity extends AppCompatActivity {
         // Create the list of all the resources
         Resources[] allResources = {
                 // Depressed
-                new Resources("Coping with depression", "When you’re depressed, you can’t just will yourself to “snap out of it.” But these tips can help put you on the road to recovery.", "https://www.helpguide.org/articles/depression/coping-with-depression.htm", MoodDepressed),
-                new Resources("What is depression?", "Depression is a disorder that is evidenced by excessive sadness, loss of interest in enjoyable things, and low motivation.", "https://thiswayup.org.au/how-do-you-feel/sad/", MoodDepressed),
-                new Resources("Cat", "Watch this video.", "https://www.youtube.com/watch?v=xbs7FT7dXYc", MoodDepressed),
-                new Resources("Depression Symptoms and Warning Signs", "Do you think you might be depressed? Here are some of the signs and symptoms to look for—and tips for getting the help you need.", "https://www.helpguide.org/articles/depression/depression-symptoms-and-warning-signs.htm", MoodDepressed),
+                new Resources("Как справиться с депрессией с депрессией", "Когда вы в депресии, вы не можете просто заставить себя выйти из этого состояния. Но эти советы могут помочь вам начать путь к выздоровлению.", "https://www.helpguide.org/articles/depression/coping-with-depression.htm", MoodDepressed),
+                new Resources("Что такое депрессия?", "Депрессия — это расстройство, которое проявляется избыточной печалью, потерей интереса к приятным вещам и низкой мотивацией.", "https://thiswayup.org.au/how-do-you-feel/sad/", MoodDepressed),
+                new Resources("Кот", "Посмотрите это видео.", "https://www.youtube.com/watch?v=xbs7FT7dXYc", MoodDepressed),
+                new Resources("Симптомы и признаки депрессии", "Вы думаете, что можете быть депрессивны? Вот некоторые признаки и симптомы, на которые стоит обратить внимание, а также советы по получению необходимой помощи.", "https://www.helpguide.org/articles/depression/depression-symptoms-and-warning-signs.htm", MoodDepressed),
 
                 // Sad
-                new Resources("Alone in the crowd - How loneliness affects the mind and body", "Watch this video about being lonely.", "https://www.youtube.com/watch?v=R8A7JodFx4s", MoodSad),
-                new Resources("Am I Depressed or Just Really Sad?", "People often think they’re depressed when they’re sad, or sad when they’re depressed.", "https://www.vice.com/en_us/article/9kzqa7/am-i-depressed-difference-sadness-depression", MoodSad),
-                new Resources("Why am I sad all the time?", "Ever felt sad or stressed for no apparent reason?", "https://au.reachout.com/articles/why-am-i-sad-all-the-time", MoodSad),
-                new Resources("How do I know if I'm sad or depressed?", "If you're afraid that your depressed, there are many things you can do to help figure it out.", "https://www.7cups.com/qa-depression-3/how-do-i-know-if-im-sad-or-depressed-650/", MoodSad),
+                new Resources("Один среди толпы - Как одиночество влияет на разум и тело", "Посмотрите это видео о чувстве одиночества.", "https://www.youtube.com/watch?v=R8A7JodFx4s", MoodSad),
+                new Resources("Я депрессивен или просто мне очень грустно?", "Люди часто считают, что они депрессивны, когда они грустят, или грустят, когда они депрессивны.", "https://www.vice.com/en_us/article/9kzqa7/am-i-depressed-difference-sadness-depression", MoodSad),
+                new Resources("Почему я постоянно грущу?", "Когда-нибудь чувствовали себя грустными или напряженными без видимой причины?", "https://au.reachout.com/articles/why-am-i-sad-all-the-time", MoodSad),
+                new Resources("Как узнать, я грущу или депрессивен?", "Если вы боитесь, что вы депрессивны, есть много вещей, которые вы можете сделать, чтобы понять это.", "https://www.7cups.com/qa-depression-3/how-do-i-know-if-im-sad-or-depressed-650/", MoodSad),
 
                 // Angry
-                new Resources("Anger Management", "Is your temper hijacking your life? These tips and techniques can help you get anger under control and express your feelings in healthier ways.", "https://www.helpguide.org/articles/relationships-communication/anger-management.htm", MoodAngry),
-                new Resources("Controlling anger before it controls you", "We all know what anger is, and we've all felt it: whether as a fleeting annoyance or as full-fledged rage.", "https://www.apa.org/topics/anger/control", MoodAngry),
-                new Resources("I'm Angry", "Watch this video.", "https://www.youtube.com/watch?v=vyMx7s9cThU", MoodAngry),
-                new Resources("Why Am I So Angry?", "Anger can be a force for good. But ongoing, intense anger is neither helpful nor healthy. Here's how to get a grip.", "https://www.webmd.com/mental-health/features/why-am-i-so-angry#1", MoodAngry),
+                new Resources("Управление гневом", "Овладевает ли вашей жизнью ваш характер? Эти советы и техники могут помочь вам контролировать гнев и выражать свои чувства более здоровым образом.", "https://www.helpguide.org/articles/relationships-communication/anger-management.htm", MoodAngry),
+                new Resources("Как контролировать гнев, прежде чем он завладеет вами", "Мы все знаем, что такое гнев, и мы все его испытывали: будь то мимолетное раздражение или полноценная ярость.", "https://www.apa.org/topics/anger/control", MoodAngry),
+                new Resources("Я злой", "Посмотрите это видео.", "https://www.youtube.com/watch?v=vyMx7s9cThU", MoodAngry),
+                new Resources("Почему я такой злой?", "Гнев может быть силой для добра. Но продолжительный, интенсивный гнев не является полезным и здоровым. Вот как взять себя в руки.", "https://www.webmd.com/mental-health/features/why-am-i-so-angry#1", MoodAngry),
 
                 // Scared
-                new Resources("Phobias and Irrational Fears", "Is a phobia keeping you from doing things you’d like to do? Learn how to recognize, treat, and overcome the problem.", "https://www.helpguide.org/articles/anxiety/phobias-and-irrational-fears.htm", MoodScared),
-                new Resources("I'm Scared", "The fact that you feel scared about these intrusive thought means that you need to see a psychotherapist.", "https://www.mentalhelp.net/advice/i-m-scared/", MoodScared),
-                new Resources("Jeremy Zucker - Scared (Lyrics)", "Listen to song about loneliness.", "https://www.youtube.com/watch?v=iyEUvUcMHgE", MoodScared),
-                new Resources("How To Stop Being So Goddamn Scared All The Time", "So, you're scared. Let's finally talk about that, shall we?", "https://ittybiz.com/how-to-stop-being-scared/", MoodScared),
+                new Resources("Фобии и иррациональные страхи", "Мешает ли вам фобия делать то, что вы хотели бы делать? Узнайте, как распознать, лечить и преодолеть эту проблему.", "https://www.helpguide.org/articles/anxiety/phobias-and-irrational-fears.htm", MoodScared),
+                new Resources("Я испуган", "Тот факт, что вы чувствуете страх от этих навязчивых мыслей, означает, что вам нужно посетить психотерапевта.", "https://www.mentalhelp.net/advice/i-m-scared/", MoodScared),
+                new Resources("Jeremy Zucker - Испуганный (Текст)", "Послушайте песню о одиночестве.", "https://www.youtube.com/watch?v=iyEUvUcMHgE", MoodScared),
+                new Resources("Как перестать быть чертовски испуганным постоянно", "Так что, вы испуганы. Давайте, наконец, поговорим об этом, хорошо?", "https://ittybiz.com/how-to-stop-being-scared/", MoodScared),
 
                 // Moderate
-                new Resources("5 Steps To Avoid Complacency", "Remember the fire in the belly you felt on the way to achieving a goal?", "https://thetobincompany.com/5-steps-to-avoid-complacency/", MoodModerate),
-                new Resources("How to be human: what it means to feel normal", "Leah Reich was one of the first internet advice columnists", "https://www.theverge.com/2017/2/5/14514224/how-to-be-human-depression-anxiety-feeling-normal", MoodModerate),
-                new Resources("NEVER GET COMFORTABLE - Best Motivational Video", "Motivate yourself with this video", "https://www.youtube.com/watch?v=2o8fmUlHAyk", MoodModerate),
-                new Resources("10 Best Things To Do With Your Free Time", "Watch this video about using your free time", "https://www.youtube.com/watch?v=afoAXho6EHs", MoodModerate),
+                new Resources("5 Шагов для избежания самодовольства", "Помните ли вы огонь в животе, который вы чувствовали на пути к достижению цели?", "https://thetobincompany.com/5-steps-to-avoid-complacency/", MoodModerate),
+                new Resources("Как быть человеком: что значит чувствовать себя нормально", "Ли Рейх была одной из первых интернет-консультантов по вопросам советов.", "https://www.theverge.com/2017/2/5/14514224/how-to-be-human-depression-anxiety-feeling-normal", MoodModerate),
+                new Resources("НИКОГДА НЕ РАССЛАБЛЯЙСЯ - Лучшее мотивационное видео", "Мотивируйте себя этим видео", "https://www.youtube.com/watch?v=2o8fmUlHAyk", MoodModerate),
+                new Resources("10 Лучших Вещей, Которые Можно Делать в Свободное Время", "Посмотрите это видео о том, как использовать свое свободное время", "https://www.youtube.com/watch?v=afoAXho6EHs", MoodModerate),
 
                 // Happy
-                new Resources("Feeling Happy and Being Happy Aren't the Same", "Can you be wrong about whether you are happy?", "https://www.psychologytoday.com/us/blog/am-i-right/201310/feeling-happy-and-being-happy-arent-the-same", MoodHappy),
-                new Resources("How to feel happier, according to neuroscientists and psychologists", "Researchers have known for decades that certain activities make us feel better, and they're just beginning to understand what happens in the brain to boost our mood.", "https://www.businessinsider.com/how-feel-happy-happier-better-2017-7", MoodHappy),
-                new Resources("Pharrell Williams - Happy", "Listen to Pharrell sing about being Happy!", "https://www.youtube.com/watch?v=ZbZSe6N_BXs", MoodHappy),
-                new Resources("The Science of Happiness: What Actually Makes Us Happy", "We all want to be happy. Period. In fact, I would argue that nearly everything we do, whether it’s working, marrying, running, or even filing our taxes is done with an overarching purpose: To feel happier.", "https://medium.com/@MaxWeigand/the-science-of-happiness-what-actually-makes-us-happy-78edcc9bdd58", MoodHappy),
+                new Resources("Чувствовать себя счастливым и быть счастливым — не одно и то же", "Можете ли вы ошибаться в том, что чувствуете себя счастливым?", "https://www.psychologytoday.com/us/blog/am-i-right/201310/feeling-happy-and-being-happy-arent-the-same", MoodHappy),
+                new Resources("Как чувствовать себя счастливее, согласно нейроученым и психологам", "Исследователи знают уже десятилетия, что определенные действия заставляют нас чувствовать себя лучше, и только начинают понимать, что происходит в мозгу, чтобы поднять настроение.", "https://www.businessinsider.com/how-feel-happy-happier-better-2017-7", MoodHappy),
+                new Resources("Pharrell Williams - Счастлив", "Послушайте, как Фаррелл поет о счастье!", "https://www.youtube.com/watch?v=ZbZSe6N_BXs", MoodHappy),
+                new Resources("Наука о счастье: что на самом деле делает нас счастливыми", "Мы все хотим быть счастливыми. В любом случае. Фактически, я бы утверждал, что почти все, что мы делаем, будь то работа, брак, бег или даже заполнение налоговой декларации, делается с главной целью: почувствовать себя счастливее.", "https://medium.com/@MaxWeigand/the-science-of-happiness-what-actually-makes-us-happy-78edcc9bdd58", MoodHappy),
         };
+
 
         resDao.insertAll(allResources);
 
@@ -185,13 +186,13 @@ public class MainActivity extends AppCompatActivity {
          */
         CharSequence moods[] = {
                 // Depressed = 1, Sad = 2, Angry = 3, Scared = 4, Moderate = 5, Happy = 6
-                "Depressed", "Sad", "Angry", "Scared", "Moderate", "Happy"
+                "Деспрессивный", "Грустный", "Злой", "Испуганный", "Спокойный", "Счастливый"
         };
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.DarkAlertDialog);
-        builder.setTitle("How are you feeling?");
+        builder.setTitle("Как вы себя чувствуете?");
         builder.setSingleChoiceItems(moods, 0, new MoodDialogChoiceListener());
-        builder.setPositiveButton("Next", new MoodDialogListener());
+        builder.setPositiveButton("Далее", new MoodDialogListener());
         builder.show();
     }
 
@@ -204,9 +205,9 @@ public class MainActivity extends AppCompatActivity {
         seekBar.setMax(4);
         seekBar.setOnSeekBarChangeListener(new MoodIntensityDialogSeekListener());
 
-        builder.setTitle("How intense is this feeling?");
+        builder.setTitle("Насколько интенсивно это чувство?");
         builder.setView(seekBar);
-        builder.setPositiveButton("Save", new MoodIntesityDialogListener());
+        builder.setPositiveButton("Сохранить", new MoodIntesityDialogListener());
 
         builder.show();
     }
