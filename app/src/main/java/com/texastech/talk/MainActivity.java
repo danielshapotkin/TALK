@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        //Чтобы запустить приложение как будто впервые, запустить один раз с тремя строками для удаления флага
         //SharedPreferences.Editor editor = sharedPrefs.edit();
         //editor.remove(IntroActivity.LAUNCHED_APP_BEFORE); // Удаляем флаг
         //editor.apply();
