@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity
 
                 // Moderate
                 new Resources("5 Шагов для избежания самодовольства", "Помните ли вы огонь в животе, который вы чувствовали на пути к достижению цели?", "https://thetobincompany.com/5-steps-to-avoid-complacency/", MoodModerate),
-                new Resources("Как быть человеком: что значит чувствовать себя нормально", "Ли Рейх была одной из первых интернет-консультантов по вопросам советов.", "https://www.theverge.com/2017/2/5/14514224/how-to-be-human-depression-anxiety-feeling-normal", MoodModerate),
+                new Resources("Как быть человеком: что значит чувствовать себя нормально", "Ли Рейх была одной из первых интернет-консультантов по этому вопросу", "https://www.theverge.com/2017/2/5/14514224/how-to-be-human-depression-anxiety-feeling-normal", MoodModerate),
                 new Resources("НИКОГДА НЕ РАССЛАБЛЯЙСЯ - Лучшее мотивационное видео", "Мотивируйте себя этим видео", "https://www.youtube.com/watch?v=2o8fmUlHAyk", MoodModerate),
                 new Resources("10 Лучших Вещей, Которые Можно Делать в Свободное Время", "Посмотрите это видео о том, как использовать свое свободное время", "https://www.youtube.com/watch?v=afoAXho6EHs", MoodModerate),
 
